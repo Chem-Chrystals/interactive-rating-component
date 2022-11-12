@@ -1,0 +1,111 @@
+:root{
+    --main: hsl(216, 12%, 8%);
+    --primary-main: hsl(213, 19%, 18%);
+    --primary-main-200: hsl(214, 22%, 25%);
+    --tertiary: hsl(0, 0%, 100%);
+    --tertiary-light: hsl(25, 97%, 53%);
+    --paragraph: hsl(217, 12%, 63%);
+    --bg-text: hsl(216, 12%, 54%);
+}
+body{
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--main);
+    display: grid;
+    place-items: center;
+    min-height: 90vh;
+}
+.container{
+    background-color: var(--primary-main);
+    width: calc(1/4 * 100%);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 0;
+}
+.star{
+    background-color: var(--primary-main-200);
+    padding: 10px ;
+    border-radius: 99px;
+    width: 24px;
+    height: 24px;
+}
+h1{
+    color: var(--tertiary);
+}
+p{
+    line-height: 1.5;
+    color: var(--bg-text);
+    margin-top: -5px;
+}
+.reviews{
+    display: flex;
+    width:  100%;
+    justify-content: space-between;
+    height: 50px;
+}
+.reviews span{
+    display: grid;
+    place-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 99px;
+    background-color: var(--primary-main-200);
+    color: var(--bg-text);
+    transition-property: color, background-color;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in;
+    cursor: pointer;
+}
+.reviews span:hover, .active{
+        --primary-main-200: var(--tertiary-light);
+    --bg-text: var(--tertiary);
+}
+button{
+    background-color: var(--tertiary-light);
+    border: none;
+    width: 100%;
+    height: 50px;
+    color: var(--tertiary);
+    border-radius: 99px;
+    display: block;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.checkout{
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    z-index: 5;
+    background-color: var(--main);
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 3s;
+    transition-timing-function: ease-in;
+}
+.thankyou-container{
+background-color: var(--primary-main);
+    width: calc(1/4 * 100%);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+.illustration{
+    width: calc(1/2 * 100%);
+}
+.details{
+    background-color: var(--primary-main-200);
+    color: var(--tertiary-light);
+    font-weight: 100;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 99px;
+    margin-top: 10px;
+}
